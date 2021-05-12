@@ -42,8 +42,8 @@ const ContextProvider = (props) => {
       })
       .then((res) => {
         setGeolocData(res.data.data);
-        console.log(res.data);
-      });
+      })
+      .catch((e) => console.log(e));
   };
 
   const colorAQI = (value) => {

@@ -15,7 +15,6 @@ const GeoLocForecast = (props) => {
 
   const dt = new Date(props.date);
   const day = dt.getDay(dt);
-  console.log(day);
   return (
     <div className={`flex flex-col p-4 sm:p-10 bg-green-800`}>
       <h1 className="flex flex-col text-xl sm:text-3xl mb-4 font-bold text-white">
