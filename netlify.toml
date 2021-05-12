@@ -4,3 +4,10 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+
+    [[redirects]]
+  from = "/"
+  to = "https://api.waqi.info/feed/
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
