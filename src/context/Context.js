@@ -37,8 +37,8 @@ const ContextProvider = (props) => {
 
   const fetchDataFromPosition = () => {
     axios
-      .get(`${baseUrl}/rome/?token=${apiKey}`, {
-        headers: { "Access-Control-Allow-Origin": "https://awesome-montalcini-913bff.netlify.app/" },
+      .get(`${baseUrl}/here/?token=${apiKey}`, {
+        headers: { "Access-Control-Allow-Origin": "*" },
       })
       .then((res) => {
         setGeolocData(res.data.data);
