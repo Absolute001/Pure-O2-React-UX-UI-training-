@@ -34,11 +34,17 @@ const ContextProvider = (props) => {
     }
   };
 
-  const fetchDataFromPosition = (position) => {
-    axios.get(`${baseUrl}/here/?token=${apiKey}`).then((res) => {
-      setGeolocData(res.data.data);
-      console.log(res.data);
-    });
+  const fetchDataFromPosition = () => {
+    axios
+      .get(`${baseUrl}/here/?token=${apiKey}`, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      })
+      .then((res) => {
+        setGeolocData(res.data.data);
+        console.log(res.data);
+      });
   };
 
   const colorAQI = (value) => {
