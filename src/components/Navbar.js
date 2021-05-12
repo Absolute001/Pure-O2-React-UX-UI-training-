@@ -8,9 +8,13 @@ const Navbar = () => {
       <Link to="/">
         <img src={Logo} alt="logo" className="w-24" />
       </Link>
-      <Link to="/about-us">
-        <h1 className="text-xl font-semibold text-white">About Us</h1>
-      </Link>
+      <a
+        href="https://www.linkedin.com/in/kevin-shallvari-a6177b1b8/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <h1 className="text-xl font-semibold text-white">About the Dev</h1>
+      </a>
     </nav>
   );
 };

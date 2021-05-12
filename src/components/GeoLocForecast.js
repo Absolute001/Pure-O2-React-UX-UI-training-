@@ -21,27 +21,28 @@ const GeoLocForecast = (props) => {
         {daysOfTheWeek[day]}
         <span className="font-normal ">{dt.toLocaleDateString()}</span>
       </h1>
+
       <div className="border-t-2 flex xl:flex-col justify-evenly	 sm:text-2xl font-bold text-white">
-        <div className="flex flex-col">
-          <p className="p-2 rounded">{`Max: ${props.max}`}</p>
+        <div className="flex shadow-lg my-4">
           <div
-            className="h-4"
+            className="w-4"
             style={{ backgroundColor: colorAQI(props.max) }}
           ></div>
+          <p className="p-2 rounded">{`Max: ${props.max}`}</p>
         </div>
-        <div className="flex flex-col">
-          <p className="p-2 rounded">{`Min: ${props.min}`}</p>
+        <div className="flex shadow-lg mb-4">
           <div
-            className="h-4"
+            className="w-4"
             style={{ backgroundColor: colorAQI(props.min) }}
           ></div>
+          <p className="p-2 rounded">{`Min: ${props.min}`}</p>
         </div>
-        <div className="flex flex-col">
-          <p className="p-2 rounded">{`Avg: ${props.avg}`}</p>
+        <div className="flex shadow-lg mb-4">
           <div
-            className="h-4"
+            className="w-4"
             style={{ backgroundColor: colorAQI(props.avg) }}
           ></div>
+          <p className="p-2 rounded">{`Avg: ${props.avg}`}</p>
         </div>
       </div>
     </div>
