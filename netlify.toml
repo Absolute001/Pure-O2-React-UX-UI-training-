@@ -1,3 +1,10 @@
+   [[redirects]]
+  from = "/"
+  to = "https://api.waqi.info/feed/"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
@@ -5,9 +12,4 @@
     [headers.values]
     Access-Control-Allow-Origin = "*"
 
-    [[redirects]]
-  from = "/"
-  to = "https://api.waqi.info/feed/
-  status = 200
-  force = true
-  headers = {X-From = "Netlify"}
+ 
