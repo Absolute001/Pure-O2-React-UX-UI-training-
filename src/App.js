@@ -1,5 +1,21 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
+import { ContextProvider } from "./context/Context";
+
 function App() {
-  return <p>this is app</p>;
+  return (
+    <ContextProvider>
+      <Router>
+        <Navbar />
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Footer />
+      </Router>
+    </ContextProvider>
+  );
 }
 
 export default App;

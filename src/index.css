@@ -2,17 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* .tree {
+  background-image: linear-gradient(
+    90deg,
+    rgb(87, 39, 11) 5%,
+    rgb(120, 53, 15) 95%,
+    rgb(224, 107, 39) 15%,
+    rgb(33, 149, 91) 5%
+  );
+}
+ */
+.darker-gradient {
+  background-image: linear-gradient(
+    110deg,
+    rgba(0, 136, 68, 0.829) 20%,
+    rgba(0, 126, 63) 
+  );
+}
+
+.lighter-gradient {
+  background-image: linear-gradient(
+    110deg,
+    rgb(2, 179, 81)20%,
+    rgb(1, 139, 54) 
+    
+  );}
+
+.reverse-gradient {
+  background-image: linear-gradient(
+    110deg,
+    rgba(0, 136, 68, 0.829) 25%,
+    rgb(0, 126, 63) 
+  );
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(2, 179, 81);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ebebeb;
+  border-radius: 8px;
+  
+}
+
+.bg-city {
+  background-image: linear-gradient(140deg, #63c8df, #50acc0 10%);
+}
+
+@media screen and (min-width: 1024px) {
+  .bg-city {
+    background-image: url("../src/img/city.jpg");
+    background-position: center;
+    background-size: cover;
+  }
 }

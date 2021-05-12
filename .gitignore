@@ -2,7 +2,9 @@
 
 # dependencies
 /node_modules
+/img
 /.pnp
+.env
 .pnp.js
 
 # testing
