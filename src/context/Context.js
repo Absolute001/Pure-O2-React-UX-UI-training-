@@ -6,7 +6,8 @@ const Context = React.createContext();
 
 const ContextProvider = (props) => {
   const apiKey = process.env.REACT_APP_API_TOKEN;
-  const baseUrl = "https://api.waqi.info/feed/";
+  const baseUrl =
+    "https://cors-proxy.htmldriven.com/?url=https://api.waqi.info/feed/";
   const [worldData, setWorldData] = useState([]);
   const [geoLocData, setGeolocData] = useState(null);
 
@@ -35,10 +36,14 @@ const ContextProvider = (props) => {
   };
 
   const fetchDataFromPosition = () => {
-    axios.get(`${baseUrl}/here/?token=${apiKey}`, {}).then((res) => {
-      setGeolocData(res.data.data);
-      console.log(res.data);
-    });
+    axios
+      .get(`${baseUrl}/here/?token=${apiKey}`, {
+        headers: {'Access-Control-Allow-Origin':'*'},
+      })
+      .then((res) => {
+        setGeolocData(res.data.data);
+        console.log(res.data);
+      });
   };
 
   const colorAQI = (value) => {
