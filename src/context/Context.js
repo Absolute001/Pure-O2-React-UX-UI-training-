@@ -40,7 +40,11 @@ const ContextProvider = (props) => {
       .then((res) => {
         setGeolocData(res.data.data);
       })
-      .catch((e) => console.log(e));
+      .catch((e) =>
+        alert(
+          "PLEASE ACTIVATE A CORS EXTENSION OR RUN ON YOUR LOCALHOST FROM THE GITHUB REPO"
+        )
+      );
   };
 
   const colorAQI = (value) => {
