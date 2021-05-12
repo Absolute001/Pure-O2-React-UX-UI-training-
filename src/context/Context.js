@@ -35,21 +35,10 @@ const ContextProvider = (props) => {
   };
 
   const fetchDataFromPosition = () => {
-    axios
-      .get(`${baseUrl}/here/?token=${apiKey}`, {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Headers":
-            "Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Origin",
-          "Content-Type": "application/json", //optional
-          "Access-Control-Allow-Methods": "GET,POST, OPTIONS",
-          "Access-Control-Max-Age": "8640",
-        },
-      })
-      .then((res) => {
-        setGeolocData(res.data.data);
-        console.log(res.data);
-      });
+    axios.get(`${baseUrl}/here/?token=${apiKey}`, {}).then((res) => {
+      setGeolocData(res.data.data);
+      console.log(res.data);
+    });
   };
 
   const colorAQI = (value) => {
