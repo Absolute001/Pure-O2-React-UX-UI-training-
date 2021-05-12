@@ -7,7 +7,7 @@ const Context = React.createContext();
 const ContextProvider = (props) => {
   const apiKey = process.env.REACT_APP_API_TOKEN;
   const baseUrl =
-    "https://thingproxy.freeboard.io/fetch/https://api.waqi.info/feed/";
+    "https://api.waqi.info/feed/";
   const [worldData, setWorldData] = useState([]);
   const [geoLocData, setGeolocData] = useState(null);
 
@@ -37,7 +37,7 @@ const ContextProvider = (props) => {
 
   const fetchDataFromPosition = () => {
     axios
-      .get(`${baseUrl}/here/?token=${apiKey}`, {
+      .get(`${baseUrl}/rome/?token=${apiKey}`, {
         headers: { "Access-Control-Allow-Origin": "https://awesome-montalcini-913bff.netlify.app/" },
       })
       .then((res) => {
