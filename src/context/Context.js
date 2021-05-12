@@ -7,7 +7,7 @@ const Context = React.createContext();
 const ContextProvider = (props) => {
   const apiKey = process.env.REACT_APP_API_TOKEN;
   const baseUrl =
-    "http://www.whateverorigin.org/get?url=https://api.waqi.info/feed/";
+    "https://api.waqi.info/feed/";
   const [worldData, setWorldData] = useState([]);
   const [geoLocData, setGeolocData] = useState(null);
 
