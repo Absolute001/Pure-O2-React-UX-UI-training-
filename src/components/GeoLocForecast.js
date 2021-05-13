@@ -16,7 +16,7 @@ const GeoLocForecast = (props) => {
   const dt = new Date(props.date);
   const day = dt.getDay(dt);
   return (
-    <div className={`flex flex-col p-4 sm:p-10 `}>
+    <div className={`flex flex-col p-4 sm:p-10`}>
       <h1 className="flex flex-col lg:text-2xl text-3xl mb-4 font-medium text-white">
         {daysOfTheWeek[day]}
         <span className="font-normal lg:text-base text-lg">

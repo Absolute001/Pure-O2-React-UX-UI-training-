@@ -13,9 +13,9 @@ const Geoloc = () => {
   }, []);
 
   return (
-    <section className="mx-auto max-w-screen-xl pb-16 xl:py-16 text-white ">
+    <section className="mx-auto max-w-screen-xl mb-16 lg:mb-28 xl:mt-28 text-white ">
       <div className="flex">
-        <h1 className="text-6xl font-bold leading-12 tracking-wide px-4 py-8 sm:p-16 mb-8 w-full bg-city xl:rounded-br-lg xl:rounded-tr-lg">
+        <h1 className="text-6xl font-bold leading-12 tracking-wide px-4 py-8 sm:p-16 w-full bg-city xl:rounded-br-lg xl:rounded-tr-lg">
           Do you <br /> breathe clean air?
           <br />
           <span className="text-3xl leading-12 tracking-wide">
@@ -40,7 +40,7 @@ const Geoloc = () => {
             e.preventDefault();
             setShowResult((prevState) => !prevState);
           }}
-          className={`hover:bg-green-700 mt-8
+          className={`hover:bg-green-700 mt-24
           transform transition duration-500 hover:scale-105 
           focus:outline-none w-52 py-2 text-2xl font-bold mx-auto ${
             showResult ? "bg-orange" : "bg-blue"

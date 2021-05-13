@@ -16,7 +16,7 @@ const GeoLocViewer = (props) => {
         overflow: !props.showed && "hidden",
       }}
     >
-      <div className="p-4 sm:px-16" ref={aqiContainerRef}>
+      <div className="lg:mt-16 p-4 sm:px-16" ref={aqiContainerRef}>
         <h2 className="text-2xl font-bold mb-8">{`City of ${props.name} *`}</h2>
         <div className="flex items-center">
           <div className=" flex border-2 items-center w-16 h-16 bg-white rounded-full">
@@ -43,7 +43,7 @@ const GeoLocViewer = (props) => {
         <div className="text-2xl rounded font-bold mb-2 bg-green-800  p-4 sm:px-8">
           <h1>Pm25 values for the week</h1>
         </div>
-        <div className="lg:grid grid-cols-5 rounded bg-green-700">
+        <div className="lg:grid grid-cols-5 rounded bg-green-700 lg:mb-10">
           {props.data.map((day, index) => (
             <GeoLocForecast
               key={index}
