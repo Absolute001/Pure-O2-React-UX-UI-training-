@@ -4,17 +4,16 @@ import GeoLocForecast from "./GeoLocForecast";
 
 const GeoLocViewer = (props) => {
   const aqiContainerRef = useRef(null);
+
   return (
     <div
-      className={`flex flex-col text-white transition-all duration-500 `}
+      className={`flex flex-col text-white transition-all duration-500 rounded`}
       style={{
         opacity: props.showed ? "1" : "0",
         height: props.showed
           ? aqiContainerRef.current.getBoundingClientRect().height
           : "0px",
         overflow: !props.showed && "hidden",
-        /* transition:
-          "height 1s cubic-bezier(0.215, 0.610, 0.355, 1), opacity 1s", */
       }}
     >
       <div className="p-4 sm:px-16" ref={aqiContainerRef}>
@@ -40,7 +39,11 @@ const GeoLocViewer = (props) => {
         <h1 className="text-3xl sm:text-5xl mb-8 font-bold">
           This is how it's going to be in the next few days
         </h1>
-        <div className="xl:grid grid-cols-5 ">
+
+        <div className="text-2xl rounded font-bold mb-2 bg-green-800  p-4 sm:px-8">
+          <h1>Pm25 values for the week</h1>
+        </div>
+        <div className="lg:grid grid-cols-5 rounded bg-green-700">
           {props.data.map((day, index) => (
             <GeoLocForecast
               key={index}

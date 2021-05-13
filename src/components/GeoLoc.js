@@ -13,7 +13,7 @@ const Geoloc = () => {
   }, []);
 
   return (
-    <section className="mx-auto max-w-screen-xl pb-16 xl:py-16 text-white">
+    <section className="mx-auto max-w-screen-xl pb-16 xl:py-16 text-white ">
       <div className="flex">
         <h1 className="text-6xl font-bold leading-12 tracking-wide px-4 py-8 sm:p-16 mb-8 w-full bg-city xl:rounded-br-lg xl:rounded-tr-lg">
           Do you <br /> breathe clean air?
@@ -24,15 +24,16 @@ const Geoloc = () => {
         </h1>
       </div>
 
-      {geoLocData ? (
-        <GeoLocViewer
-          name={geoLocData.city.name}
-          colorAQI={colorAQI(geoLocData.aqi)}
-          healthAQI={healthAQI(geoLocData.aqi)}
-          showed={showResult}
-          data={geoLocData.forecast.daily.pm25}
-        />
-      ) : null}
+        {geoLocData ? (
+          <GeoLocViewer
+            name={geoLocData.city.name}
+            colorAQI={colorAQI(geoLocData.aqi)}
+            healthAQI={healthAQI(geoLocData.aqi)}
+            showed={showResult}
+            data={geoLocData.forecast.daily.pm25}
+          />
+        ) : null}
+
       <div className="flex">
         <button
           onClick={(e) => {
