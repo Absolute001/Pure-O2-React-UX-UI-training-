@@ -34,9 +34,11 @@ const ContextProvider = (props) => {
     }
   };
 
+
+
   const fetchDataFromPosition = () => {
     axios
-      .get(`${baseUrl}/here/?token=${apiKey}`)
+      .get(`${baseUrl}here/?token=${apiKey}`)
       .then((res) => {
         setGeolocData(res.data.data);
       })
