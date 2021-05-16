@@ -7,33 +7,7 @@ const Context = React.createContext();
 const ContextProvider = (props) => {
   const apiKey = process.env.REACT_APP_API_TOKEN;
   const baseUrl = "https://api.waqi.info/feed/";
-  const [worldData, setWorldData] = useState([]);
   const [geoLocData, setGeolocData] = useState(null);
-
-  const fetchDataFromWorld = async () => {
-    const cities = [
-      "Beijing",
-      "New York",
-      "Montreal",
-      "Mumbai",
-      "Tokyo",
-      "Sao Paulo",
-      "Mexico city",
-      "Shangai",
-      "Milan",
-      "London",
-    ];
-
-    for (const city of cities) {
-      try {
-        const resp = await axios.get(`${baseUrl}${city}/?token=${apiKey}`);
-        setWorldData((prevState) => [...prevState, resp.data.data]);
-      } catch (e) {
-        console.log(e);
-      }
-    }
-  };
-
 
 
   const fetchDataFromPosition = () => {
@@ -90,8 +64,6 @@ const ContextProvider = (props) => {
   return (
     <Context.Provider
       value={{
-        fetchDataFromWorld,
-        worldData,
         fetchDataFromPosition,
         geoLocData,
         healthAQI,
